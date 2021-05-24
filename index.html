@@ -5,15 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <h2>Computer Choice: <span id="computer-choice"></span></h2>
-    <h2>User Choice: <span id="user-choice"></span></h2>
-    <h2>Result: <span id="result"></span></h2>
+    <header>
+        <h1>Rock, Paper, Scissors!</h1>
+        <h3>Do you have what it takes to take on a computer?</h3>
+    </header>
+    <section class="scoreboard">
+        <div class="scoreboard-box">
+            <h2>Your Score: <span id="user-score">0</span></h2>
+        </div>
+        <div class="scoreboard-box">
+            <h2>Computer Score: <span id="computer-score">0</span></h2>
+        </div>
+    </section>
+    <section class="choices">
+        <div class="choices-box">
+            <h2>User Choice: <span id="user-choice"></span></h2>
+        </div>
+        <div class="choices-box result">
+            <h2>Result: <span id="result"></span></h2>
+        </div>
+        <div class="choices-box">
+            <h2>Computer Choice: <span id="computer-choice"></span></h2>
+        </div>
+    
+    </section>
+    <section id="gif-content" class="gif-content">
+        <h2 id="gif-result">Pick your choice!</h2>
+    </section>
 
-    <button id="rock">rock</button>
-    <button id="paper">paper</button>
-    <button id="scissors">scissors</button>
+    <section class="button-container">
+        <button id="rock">ROCK</button>
+        <button id="paper">PAPER</button>
+        <button id="scissors">SCISSORS</button>
+    </section>
 
 
     <script src="./js/app.js" charset="utf-8"></script>

@@ -2,15 +2,23 @@ const computerChoiceDisplay = document.getElementById("computer-choice");
 const userChoiceDisplay = document.getElementById("user-choice");
 const resultDisplay = document.getElementById("result");
 const possibleChoices = document.querySelectorAll("button");
+const userScoreDisplay = document.getElementById("user-score");
+const computerScoreDisplay = document.getElementById("computer-score");
+const gifResult = document.getElementById('gif-result');
+let userScore = 0;
+let computerScore = 0;
 let userChoice;
 let computerChoice;
 let result;
 
+//Game
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
     userChoice = e.target.id;
     userChoiceDisplay.innerHTML = userChoice;
     generateComputerChoice();
     getResult()
+    updateScore(result);
+    document.getElementById('gif-result').style.display = "none";
 }))
 
 function generateComputerChoice() {
@@ -30,13 +38,13 @@ function generateComputerChoice() {
 
 function getResult() {
     if (computerChoice === userChoice){
-        result = "it's a draw";
+        result = "it's a draw!";
     }
     if (computerChoice === 'rock' && userChoice === 'paper'){
         result = 'you win!'
     }
     if (computerChoice === 'rock' && userChoice === 'scissors'){
-        result = 'you lost!'
+        result = 'you lose!'
     }
     if (computerChoice === 'paper' && userChoice === 'scissors'){
         result = 'you win!'
@@ -51,4 +59,20 @@ function getResult() {
         result = 'you lose!'
     }
     resultDisplay.innerHTML = result;
+}
+
+//scoreboard
+function updateScore(winner){
+    if (winner === 'you win!'){
+        userScore++;
+        document.getElementById('gif-content').style.backgroundImage = "url(./images/win.gif)"
+    } if (winner === 'you lose!') {
+        computerScore++;
+        document.getElementById('gif-content').style.backgroundImage = "url(./images/lose.gif)"
+    }
+    if (winner === 'it\'s a draw!') {
+        document.getElementById('gif-content').style.backgroundImage = "url(./images/draw.gif)"
+    }
+    userScoreDisplay.innerHTML = userScore;
+    computerScoreDisplay.innerHTML = computerScore;
 }

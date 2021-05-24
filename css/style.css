@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+body {
+    background-color: #05668D;
+    font-family: 'Reggae One', cursive;
+    color: #F0F3BD;
+}
+/**HEADER**/
+header {
+    margin: 50px;
+    text-align: center;
+    font-size: 44px;
+    
+}
+header h3{
+    font-size: 36px;
+}
+/** SCOREBOARD **/
+.scoreboard{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+.scoreboard-box {
+    margin: 30px;
+    border-radius: 5px;
+    background-color: #028090;
+}
+/** CHOICE & RESULT**/
+.choices {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 24px;
+}
+.choices-box{
+    margin: 30px;
+    border-radius: 5px;
+    background-color: #00A896;
+}
+.result{
+    background-color: #02C39A;
+}
+/** GIF CONTENT **/
+.gif-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    margin: 100px;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/** BUTTON CONTAINER **/
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #167c8a 5%, #5ebda7 100%);
+	background-color:#167c8a;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#f0f3bd;
+	font-family: 'Reggae One', cursive;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3b6f80;
+    margin: 0 20px;
+    width: 180px;
+}
+button:hover {
+	background:linear-gradient(to bottom, #5ebda7 5%, #167c8a 100%);
+	background-color:#5ebda7;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
